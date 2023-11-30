@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: rubik;
+    color: white;
+    font-size: 4rem;
+    background-color: #16161e;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+ 
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+}
+
+.extra {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    min-height: 100vh;
+    
+}
+
+.container2 {
+    display: flex;
+   overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.gradient, .gradient::after {
+    position: absolute;
+    
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+
+
+
+.gradient.uno, .gradient.uno::after {
+    height: 700px;
+    aspect-ratio: 1;
+}
+.gradient.dos, .gradient.dos::after {
+    height: 590px;
+    aspect-ratio: 1;
+}
+
+.gradient.tres, .gradient.tres::after {
+    height: 387px;
+    aspect-ratio: 1;
+}
+
+.gradient {
+    
+    opacity: 50%;
+}
+
+.uno {
+    -webkit-mask: radial-gradient(transparent 300px, #000 301px);
+}
+
+.dos {
+    -webkit-mask: radial-gradient(transparent 200px, #000 201px);
+}
+
+.tres {
+    -webkit-mask: radial-gradient(transparent 100px, #000 101px);
+}
+
+/* BAKCGROUND CIRLCES */
+.gradient.red {
+    opacity: 50%;
+    background: linear-gradient(to bottom, var(--gradient-color-1), gold);
+}
+
+.gradient.white {
+    opacity: 50%;
+    z-index: -1;
+}
+
+/* || ROTATING OVERLAY CIRCLES */
+.gradient.blue {
+    opacity: 50%;
+    background: linear-gradient(to bottom, orange, gold);
+    transition: transform .5s ease;
+}
+
+.gradient.blue:hover {
+   transform: rotate(90deg);
+}
+
+.gradient.blue::after {
+    content: "";
+    background: linear-gradient(to bottom, magenta, gold);
+    -webkit-mask-image: linear-gradient(to left, black, transparent);
+}
+
+.gradient.red::after {
+    content: "";
+    background: linear-gradient(to bottom, purple, gold);
+    -webkit-mask-image: linear-gradient(to left, black, transparent);
+}
