@@ -3,6 +3,18 @@
     margin: 0;
 }
 
+html {
+    --gradient-color-1: white;
+    --gradient-color-2: white;
+    --gradient-color-3: white;
+    --gradient-color-4: white;
+    --gradient-color-5: white;
+    --gradient-color-6: white;
+    --gradient-color-7: white;
+    --gradient-color-8: white;
+
+}
+
 body {
     font-family: rubik;
     color: white;
@@ -82,6 +94,7 @@ main {
 
 .uno {
     -webkit-mask: radial-gradient(transparent 300px, #000 301px);
+    mask: radial-gradient(transparent 300px, #000 301px);
 }
 
 .dos {
@@ -95,7 +108,7 @@ main {
 /* BAKCGROUND CIRLCES */
 .gradient.red {
     opacity: 50%;
-    background: linear-gradient(to bottom, var(--gradient-color-1), gold);
+    background: linear-gradient(to bottom, var(--gradient-color-1), var(--gradient-color-2));
 }
 
 .gradient.white {
@@ -106,22 +119,18 @@ main {
 /* || ROTATING OVERLAY CIRCLES */
 .gradient.blue {
     opacity: 50%;
-    background: linear-gradient(to bottom, orange, gold);
-    transition: transform .5s ease;
-}
+    background: linear-gradient(to bottom, var(--gradient-color-3),var(--gradient-color-4));
 
-.gradient.blue:hover {
-   transform: rotate(90deg);
 }
 
 .gradient.blue::after {
     content: "";
-    background: linear-gradient(to bottom, magenta, gold);
+    background: linear-gradient(to bottom, var(--gradient-color-5), var(--gradient-color-6));
     -webkit-mask-image: linear-gradient(to left, black, transparent);
 }
 
 .gradient.red::after {
     content: "";
-    background: linear-gradient(to bottom, purple, gold);
+    background: linear-gradient(to bottom, var(--gradient-color-7), var(--gradient-color-8));
     -webkit-mask-image: linear-gradient(to left, black, transparent);
 }
